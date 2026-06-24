@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Les Transformations - Winx Club</title>
+    <!-- Style général (fonds, polices, couleurs) -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- Style spécifique aux modales/pop-ups -->
+    <link rel="stylesheet" href="transformations.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Transformations</h1>
+      <p>l'évolution des pouvoirs</p>
+    </header>
+
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="fees.html">Les Fées</a>
+      <a href="specialistes.html">Les Spécialistes</a>
+      <a href="trix.html">Les Trix</a>
+      <a href="transformations.html">Transformations</a>
+    </nav>
+
+    <div class="container">
+      <h2>L'évolution</h2>
+
+      <div class="fairy-list">
+        <!-- Saison 1 à 3 -->
+        <div class="fairy-card" onclick="openModal('modal-base')">
+          <img src="img/winx-une-sondage.webp" alt="Magie des Winx" />
+          <h4>Magie des Winx</h4>
+          <p>La base</p>
+          <small>Découvrir</small>
+        </div>
+        <div class="fairy-card" onclick="openModal('modal-charmix')">
+            <img src="img/Charmix.webp" alt="Charmix" />
+          <h4>Charmix</h4>
+          <p>L'énergie pure</p>
+          <small>Découvrir</small>
+        </div>
+        <div class="fairy-card" onclick="openModal('modal-enchantix')">
+        <img src="img/enchantix.jpg" alt="Enchantix" />
+          <h4>Enchantix</h4>
+          <p>Poussière de fée</p>
+          <small>Découvrir</small>
+        </div>
+
+        <!-- Saison 4 -->
+        <div class="fairy-card" onclick="openModal('modal-believix')">
+            <img src="img/Believix.jpg" alt="Believix" />
+          <h4>Believix</h4>
+          <p>Le pouvoir de la foi</p>
+          <small>Découvrir</small>
+        </div>
+
+        <!-- Saison 5 -->
+        <div class="fairy-card" onclick="openModal('modal-harmonix')">
+            <img src="img/harmonix.webp" alt="Harmonix" />
+          <h4>Harmonix</h4>
+          <p>Magie marine</p>
+          <small>Découvrir</small>
+        </div>
+        <div class="fairy-card" onclick="openModal('modal-sirenix')">
+            <img src="img/Sirenix.webp" alt="Sirenix" />
+          <h4>Sirenix</h4>
+          <p>L'Océan Infini</p>
+          <small>Découvrir</small>
+        </div>
+
+        <!-- Saison 6 -->
+        <div class="fairy-card" onclick="openModal('modal-bloomix')">
+            <img src="img/Bloomix.jpeg" alt="Bloomix" />
+          <h4>Bloomix</h4>
+          <p>Flamme du Dragon</p>
+          <small>Découvrir</small>
+        </div>
+        <div class="fairy-card" onclick="openModal('modal-mythix')">
+            <img src="img/Mythix.jpg" alt="Mythix" />
+          <h4>Mythix</h4>
+          <p>Le Légendarium</p>
+          <small>Découvrir</small>
+        </div>
+
+        <!-- Saison 7 -->
+        <div class="fairy-card" onclick="openModal('modal-butterflix')">
+            <img src="img/butterflix.jpg" alt="Butterflix" />
+          <h4>Butterflix</h4>
+          <p>Animaux féériques</p>
+          <small>Découvrir</small>
+        </div>
+        <div class="fairy-card" onclick="openModal('modal-tynix')">
+            <img src="img/tynix.webp" alt="Tynix" />
+          <h4>Tynix</h4>
+          <p>Les Mini-mondes</p>
+          <small>Découvrir</small>
+        </div>
+
+        <!-- Saison 8 & Spin-off -->
+        <div class="fairy-card" onclick="openModal('modal-cosmix')">
+            <img src="img/cosmix.webp" alt="Cosmix" />
+          <h4>Cosmix</h4>
+          <p>Lumière des étoiles</p>
+          <small>Découvrir</small>
+        </div>
+        <div class="fairy-card" onclick="openModal('modal-dreamix')">
+            <img src="img/dreamix.webp" alt="Dreamix & Onyrix" />
+          <h4>Dreamix & Onyrix</h4>
+          <p>Monde des Rêves</p>
+          <small>Découvrir</small>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================
+     LES POP-UPS (MODALES) CACHÉES
+     ========================================== -->
+
+    <!-- Modales Saisons 1-3 -->
+    <div
+      id="modal-base"
+      class="modal-overlay"
+      onclick="closeModal(event, 'modal-base')"
+    >
+      <div class="modal-content">
+        <span class="close-btn" onclick="forceClose('modal-base')"
+          >&times;</span
+        >
+        <h3>Magie des Winx</h3>
+        <p>
+          <strong>Origine :</strong> Capacité innée de chaque fée.<br /><br />
+          Il s'agit de la toute première forme de transformation. Les fées
+          canalisent leur énergie pour faire apparaître des tenues étincelantes
+          et de petites ailes basiques. C'est le pouvoir brut et instinctif qui
+          se manifeste lorsqu'une fée accepte sa vraie nature.
+        </p>
+      </div>
+    </div>
+
+    <div
+      id="modal-charmix"
+      class="modal-overlay"
+      onclick="closeModal(event, 'modal-charmix')"
+    >
+      <div class="modal-content">
+        <span class="close-btn" onclick="forceClose('modal-charmix')"
+          >&times;</span
+        >
+        <h3>Charmix</h3>
+        <p>
+          <strong>Obtention :</strong> Vaincre ses plus grandes peurs et
+          insécurités.<br /><br />
+          Le Charmix est une amélioration de la Magie des Winx. Il se
+          matérialise sous la forme d'un bijou sur la poitrine et d'un petit sac
+          magique sur la hanche. Il permet de booster considérablement la
+          puissance magique dans des environnements hostiles.
+        </p>
+      </div>
+    </div>
+
+    <div
+      id="modal-enchantix"
+      class="modal-overlay"
+      onclick="closeModal(event, 'modal-enchantix')"
+    >
+      <div class="modal-content">
+        <span class="close-btn" onclick="forceClose('modal-enchantix')"
+          >&times;</span
+        >
+        <h3>Enchantix</h3>
+        <p>
+          <strong>Obtention :</strong> Se sacrifier pour sauver quelqu'un de sa
+          propre planète.<br /><br />
+          C'est le niveau final pour devenir une fée accomplie à Alféa. Les
+          ailes deviennent immenses, les tenues s'enrichissent de joyaux et les
+          fées obtiennent la mythique Poussière de Fée, capable de briser
+          n'importe quel sortilège sombre et de miniaturiser la fée.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modales Saison 4 -->
+    <div
+      id="modal-believix"
+      class="modal-overlay"
+      onclick="closeModal(event, 'modal-believix')"
+    >
+      <div class="modal-content">
+        <span class="close-btn" onclick="forceClose('modal-believix')"
+          >&times;</span
+        >
+        <h3>Believix</h3>
+        <p>
+          <strong>Obtention :</strong> Convaincre les humains de la Terre de
+          croire en la magie.<br /><br />
+          Une transformation terrienne par excellence. Plus les humains croient
+          en la fée, plus elle devient puissante. Le Believix offre également
+          trois paires d'ailes spéciales (Speedix, Tracix, Zoomix) et permet
+          d'accéder aux sous-transformations Lovix et Sophix.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modales Saison 5 -->
+    <div
+      id="modal-harmonix"
+      class="modal-overlay"
+      onclick="closeModal(event, 'modal-harmonix')"
+    >
+      <div class="modal-content">
+        <span class="close-btn" onclick="forceClose('modal-harmonix')"
+          >&times;</span
+        >
+        <h3>Harmonix</h3>
+        <p>
+          <strong>Obtention :</strong> Offert par les Gardiennes Sirenix.<br /><br />
+          C'est un pouvoir temporaire accordé aux fées pour leur permettre de
+          nager plus rapidement et d'utiliser leur magie sous l'eau de manière
+          efficace, en attendant de débloquer la véritable puissance du Sirenix.
+          Les tenues s'inspirent des sirènes et de la nature marine.
+        </p>
+      </div>
+    </div>
+
+    <div
+      id="modal-sirenix"
+      class="modal-overlay"
+      onclick="closeModal(event, 'modal-sirenix')"
+    >
+      <div class="modal-content">
+        <span class="close-btn" onclick="forceClose('modal-sirenix')"
+          >&times;</span
+        >
+        <h3>Sirenix</h3>
+        <p>
+          <strong>Obtention :</strong> Résoudre les énigmes du livre Sirenix et
+          trouver les gemmes de la confiance, de l'empathie et du courage.<br /><br />
+          Une magie très ancienne et incroyablement puissante. Elle permet aux
+          fées d'entrer dans l'Océan Infini. Leurs cheveux changent de couleur
+          sous l'eau et leurs sorts sont adaptés aux environnements abyssaux.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modales Saison 6 -->
+    <div
+      id="modal-bloomix"
+      class="modal-overlay"
+      onclick="closeModal(event, 'modal-bloomix')"
+    >
+      <div class="modal-content">
+        <span class="close-btn" onclick="forceClose('modal-bloomix')"
+          >&times;</span
+        >
+        <h3>Bloomix</h3>
+        <p>
+          <strong>Obtention :</strong> Accomplir un acte de bravoure pur après
+          avoir reçu une étincelle de la Flamme du Dragon.<br /><br />
+          Après avoir perdu leurs pouvoirs, Bloom partage sa magie avec les
+          autres Winx. Les tenues Bloomix ressemblent à de véritables armures
+          féériques, conçues pour affronter les créatures cauchemardesques du
+          Légendarium.
+        </p>
+      </div>
+    </div>
+
+    <div
+      id="modal-mythix"
+      class="modal-overlay"
+      onclick="closeModal(event, 'modal-mythix')"
+    >
+      <div class="modal-content">
+        <span class="close-btn" onclick="forceClose('modal-mythix')"
+          >&times;</span
+        >
+        <h3>Mythix</h3>
+        <p>
+          <strong>Obtention :</strong> Prouver sa valeur devant les baguettes
+          ancestrales.<br /><br />
+          Cette transformation unique est nécessaire pour pénétrer physiquement
+          à l'intérieur du Légendarium (le monde des mythes et légendes). Les
+          fées utilisent des baguettes magiques pour lancer leurs sorts dans
+          cette dimension entièrement en 3D.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modales Saison 7 -->
+    <div
+      id="modal-butterflix"
+      class="modal-overlay"
+      onclick="closeModal(event, 'modal-butterflix')"
+    >
+      <div class="modal-content">
+        <span class="close-btn" onclick="forceClose('modal-butterflix')"
+          >&times;</span
+        >
+        <h3>Butterflix</h3>
+        <p>
+          <strong>Obtention :</strong> Prouver son amour et son respect
+          inconditionnels pour la nature et la faune.<br /><br />
+          Le Butterflix est lié au pouvoir des Animaux Féériques. Il permet
+          d'invoquer la magie de la nature et d'apaiser les créatures
+          ensorcelées. Les robes sont volumineuses et évoquent les ailes de
+          papillons.
+        </p>
+      </div>
+    </div>
+
+    <div
+      id="modal-tynix"
+      class="modal-overlay"
+      onclick="closeModal(event, 'modal-tynix')"
+    >
+      <div class="modal-content">
+        <span class="close-btn" onclick="forceClose('modal-tynix')"
+          >&times;</span
+        >
+        <h3>Tynix</h3>
+        <p>
+          <strong>Obtention :</strong> Offert par les Animaux Féériques liés aux
+          Winx.<br /><br />
+          Cette magie de cristal permet aux fées de rétrécir pour explorer les
+          Mini-mondes qui soutiennent l'écosystème de la dimension magique
+          (comme l'intérieur d'une goutte d'eau ou d'une feuille). Les tenues
+          sont incrustées de diamants étincelants.
+        </p>
+      </div>
+    </div>
+
+    <!-- Modales Saison 8 & Spin-off -->
+    <div
+      id="modal-cosmix"
+      class="modal-overlay"
+      onclick="closeModal(event, 'modal-cosmix')"
+    >
+      <div class="modal-content">
+        <span class="close-btn" onclick="forceClose('modal-cosmix')"
+          >&times;</span
+        >
+        <h3>Cosmix</h3>
+        <p>
+          <strong>Obtention :</strong> Accordé par la Reine Dorana de
+          Lumenia.<br /><br />
+          Une transformation spatiale ! Le Cosmix permet aux Winx de respirer
+          dans l'espace, de voyager à travers la galaxie et de restaurer le cœur
+          mourant des étoiles. C'est la transformation principale de la 8ème
+          saison.
+        </p>
+      </div>
+    </div>
+
+    <div
+      id="modal-dreamix"
+      class="modal-overlay"
+      onclick="closeModal(event, 'modal-dreamix')"
+    >
+      <div class="modal-content">
+        <span class="close-btn" onclick="forceClose('modal-dreamix')"
+          >&times;</span
+        >
+        <h3>Dreamix & Onyrix</h3>
+        <p>
+          <strong>Origine :</strong> Séries "World of Winx".<br /><br />
+          Le <strong>Dreamix</strong> est obtenu lorsque les Winx aident une
+          personne à réaliser son rêve sur Terre. <br />L'<strong
+            >Onyrix</strong
+          >
+          est son évolution directe, permettant d'entrer dans le Monde des Rêves
+          pour y combattre les entités ténébreuses. Les tenues prennent la forme
+          d'élégantes combinaisons pantalon.
+        </p>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 Aurélys & Magix. Tous droits réservés.</p>
+    </footer>
+
+    <!-- MOTEUR JAVASCRIPT -->
+    <script>
+      function openModal(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.style.display = "flex";
+        setTimeout(() => {
+          modal.classList.add("active");
+        }, 10);
+      }
+
+      function closeModal(event, modalId) {
+        if (event.target.classList.contains("modal-overlay")) {
+          forceClose(modalId);
+        }
+      }
+
+      function forceClose(modalId) {
+        const modal = document.getElementById(modalId);
+        modal.classList.remove("active");
+        setTimeout(() => {
+          modal.style.display = "none";
+        }, 400);
+      }
+    </script>
+  </body>
+</html>

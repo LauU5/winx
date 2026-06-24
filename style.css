@@ -1,0 +1,216 @@
+/* =========================================
+   VARIABLES (Palette Nynä - Winx Pastel)
+   ========================================= */
+:root {
+    /* Les couleurs exactes de ton image */
+    --porcelain: #fffff6;
+    --bone: #e8e2d4;
+    --lilac-ash: #aaa0bb;
+    --bright-lavender: #b57dda;
+    --french-blue: #41478b;
+
+    /* Assignation des rôles */
+    --bg-color: var(--porcelain);
+    --text-main: var(--french-blue);
+    --text-muted: var(--lilac-ash);
+    --accent: var(--bright-lavender);
+    --card-img-bg: var(--bone);
+    --border-thin: rgba(65, 71, 139, 0.15); /* French Blue avec transparence */
+}
+
+/* =========================================
+   POLICES (Google Fonts)
+   ========================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* =========================================
+   BASE
+   ========================================= */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    padding-bottom: 80px;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--french-blue);
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* =========================================
+   EN-TÊTE (HEADER)
+   ========================================= */
+header {
+    text-align: center;
+    padding: 4rem 1rem 2rem;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    color: var(--french-blue);
+}
+
+header p {
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    color: var(--lilac-ash);
+}
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid var(--border-thin);
+    margin-bottom: 3rem;
+}
+
+nav a {
+    color: var(--lilac-ash);
+    text-decoration: none;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: var(--bright-lavender);
+}
+
+/* =========================================
+   CONTENEUR PRINCIPAL
+   ========================================= */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.container h2 {
+    font-size: 2.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 3rem;
+    text-align: left;
+    color: var(--french-blue);
+}
+
+/* =========================================
+   CARTES (Style Portfolio Editorial)
+   ========================================= */
+.fairy-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.fairy-card {
+    background: transparent;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+    transition: transform 0.4s ease;
+}
+
+/* Blocs simulant l'emplacement de l'image (Couleur Bone) */
+.fairy-card::before {
+    content: '';
+    display: block;
+    height: 300px;
+    background-color: var(--card-img-bg);
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    transition: all 0.4s ease;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
+}
+
+.fairy-card:hover {
+    transform: translateY(-5px);
+}
+
+.fairy-card:hover::before {
+    /* Au survol, le bloc prend un très léger reflet lavande */
+    background-color: #dfd7e6; 
+}
+
+.fairy-card h4 {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    color: var(--bright-lavender);
+}
+
+.fairy-card p {
+    font-size: 0.85rem;
+    margin: 0;
+    color: var(--lilac-ash);
+}
+
+.fairy-card small {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 25px;
+    border: 1px solid var(--border-thin);
+    border-radius: 30px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--french-blue);
+    transition: all 0.3s ease;
+}
+
+.fairy-card:hover small {
+    border-color: var(--bright-lavender);
+    background-color: var(--bright-lavender);
+    color: var(--porcelain);
+}
+/* =========================================
+   STYLE DES IMAGES DES CARTES
+   ========================================= */
+.fairy-card img {
+    width: 100%;            /* L'image prend toute la largeur de la carte */
+    height: 300px;          /* On fixe la même hauteur pour toutes les images */
+    object-fit: cover;      /* MAGIQUE : Coupe l'image proprement sans l'écraser ni la déformer */
+    border-radius: 12px;    /* Coins arrondis pour la douceur */
+    margin-bottom: 1.5rem;  /* Espace avec le titre en dessous */
+    box-shadow: 0 4px 10px rgba(65, 71, 139, 0.1); /* Légère ombre élégante */
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Petit effet au survol sur l'image */
+.fairy-card:hover img {
+    transform: scale(1.03); /* Zoome très légèrement l'image */
+    opacity: 0.9;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 2rem;
+    border-top: 1px solid var(--border-thin);
+    color: var(--lilac-ash);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 4rem;
+}

@@ -1,0 +1,78 @@
+/* =========================================
+   MODALES (Palette Nynä - Thème Doux)
+   ========================================= */
+.modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100vh;
+    /* Fond assombri avec le French Blue pour faire ressortir la modale */
+    background: rgba(65, 71, 139, 0.6); 
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 3000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.modal-content {
+    background: var(--porcelain);
+    border: 1px solid var(--border-thin);
+    border-radius: 16px;
+    padding: 4rem 3rem;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    position: relative;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    box-shadow: 0 20px 40px rgba(65, 71, 139, 0.15);
+}
+
+.modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+}
+
+/* Bouton de fermeture (Croix) */
+.close-btn {
+    position: absolute;
+    top: 20px; right: 25px;
+    color: var(--lilac-ash);
+    font-size: 2rem;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: var(--bright-lavender);
+}
+
+/* Typographie à l'intérieur de la modale */
+.modal-content h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--bright-lavender);
+    font-size: 2.2rem;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.modal-content p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--french-blue);
+}
+
+/* Style spécifique pour les mots mis en gras (Origine, Obtention...) */
+.modal-content p strong {
+    color: var(--bright-lavender);
+    font-weight: 500;
+}
