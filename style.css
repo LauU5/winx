@@ -130,26 +130,13 @@ nav a:hover {
     transition: transform 0.4s ease;
 }
 
-/* Blocs simulant l'emplacement de l'image (Couleur Bone) */
-.fairy-card::before {
-    content: '';
-    display: block;
-    height: 300px;
-    background-color: var(--card-img-bg);
-    border-radius: 12px;
-    margin-bottom: 1.5rem;
-    transition: all 0.4s ease;
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.03);
-}
+
 
 .fairy-card:hover {
     transform: translateY(-5px);
 }
 
-.fairy-card:hover::before {
-    /* Au survol, le bloc prend un très léger reflet lavande */
-    background-color: #dfd7e6; 
-}
+
 
 .fairy-card h4 {
     font-size: 1.2rem;
